@@ -45,6 +45,15 @@ java -jar [BUNDLE_TOOLS_JAR_PATH] build-apks --bundle=[SOURCE_AAB_PATH] --output
 更多BundleTool的应用，请查看[BundleTool官方文档](https://developer.android.com/studio/command-line/bundletool)。
 
 ## 发布阶段
-大体上，将aab文件交给运营即可。但在首次发布时，需要注意一个比较重要的问题：
+大体上，将aab文件交给运营即可。但在首次发布时，需要注意一个比较重要的问题：避免Google对应用进行重新签名，需要研发与运营配合完成，步骤如下：
+- 默认情况下Google会对通过aab格式发布的应用进行重新签名，点击“更改应用签名密钥”：
+![默认签名方式](https://github.com/CuiTianci/DevNotes/blob/main/Android/AppBundle/src/default.png)
+- 建议使用下图中标注的方式生成并上传签名证书，命令行中的keystore即第一步生成的签名文件，pepk工具及命令行由运营提供。
+![使用自己的签名](https://github.com/CuiTianci/DevNotes/blob/main/Android/AppBundle/src/%E6%9B%B4%E6%94%B9%E7%AD%BE%E5%90%8D.png)
+- 查看修改结果
+![修改结果](https://github.com/CuiTianci/DevNotes/blob/main/Android/AppBundle/src/result.png)
+
+## 拓展链接
+[About App Bundle](https://developer.android.com/guide/app-bundle)
 
 
