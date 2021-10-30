@@ -53,6 +53,9 @@ java -jar [BUNDLE_TOOLS_JAR_PATH] build-apks --bundle=[SOURCE_AAB_PATH] --output
 - 查看修改结果
 ![修改结果](https://github.com/CuiTianci/DevNotes/blob/main/Android/AppBundle/src/result.png)
 
+## 注意事项
+- 以aab格式上传应用时，Google Play Console会自动从aab中提取出mapping文件，无需额外上传。
+
 ## 拓展链接
 [About App Bundle](https://developer.android.com/guide/app-bundle)
 
