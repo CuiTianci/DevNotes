@@ -7,7 +7,7 @@
 ![项目签名模板](https://github.com/CuiTianci/DevNotes/blob/main/Android/AppBundle/src/%E9%A1%B9%E7%9B%AE%E7%AD%BE%E5%90%8D%E6%A8%A1%E6%9D%BF.png)
 - 生成的签名文件为.jks格式文件，按公司要求将其转换为.keystore文件，推荐方式如下：
 ```terminal
-bjmm100001@chengcaideiMac bar % keytool -importkeystore -srckeystore [SOURCE_JKS_PATH] -srcstoretype JKS -deststoretype PKCS12 -destkeystore [TARGET_KEYSTORE_PATH]
+keytool -importkeystore -srckeystore [SOURCE_JKS_PATH] -srcstoretype JKS -deststoretype PKCS12 -destkeystore [TARGET_KEYSTORE_PATH]
 ```
 - 在项目中配置签名信息
 ```groovy
